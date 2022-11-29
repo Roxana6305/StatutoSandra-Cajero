@@ -11,7 +11,7 @@ def cajero():
         clave = int(input("ingresa tu clave: "))
         nombre = str(input("ingresa tu nombre: "))
         saldo = float(85200)
-        saldoDolar = float(0)
+        saldoDolar = float(100)
         if clave == 1234:
             print("#########################################")
             print("Bienvenido a tu cuenta", nombre, "!!")
@@ -81,7 +81,28 @@ def cajero():
                 elif confirma == "no":
                     print("has cancelado tu compra")            
             #6vender dolares
+            elif opcion == 6:
+                print("#####################################")
+                print("    el precio del dolar es de $320")
+                print("    tu saldo es el siguiente: " , saldoDolar)
+                print("#####################################")
+                venderDolar = float(input("ingresa el monto de dolares a vender: "))
+                print("#####################################")
+                print("estas seguro de vender : u$s" , venderDolar, " dolares ?")
+                confirma  = str(input("ingresa \n     #si para confirmar. \n     #no para cancelar "))
+                print("#####################################")
+                if confirma == "si":
+                    conversion = venderDolar * 320
+                    saldoActual = saldo + conversion
+                    saldoDolar = saldoDolar - venderDolar
+                    print("#####################################################")
+                    print("tu saldo en tu cuenta pesos es de: $" , saldoActual)
+                    print("tu saldo en tu cuenta dolares es de: u$s" , saldoDolar )
+                    print("#####################################################")
+                elif confirma == "no":
+                    print("has cancelado tu venta")  
             #7crear plazo fijo
+            
             #8ver ultimos movimientos
             #9salir de la cuenta
         else:
