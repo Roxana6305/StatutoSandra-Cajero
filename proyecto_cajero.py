@@ -102,7 +102,25 @@ def cajero():
                 elif confirma == "no":
                     print("has cancelado tu venta")  
             #7crear plazo fijo
-            
+            elif opcion == 7:
+                print ("#######################")
+                print ("La tasa de interes es de 85 anual")
+                print ("En tu cuenta tienes", saldo "Cuanto deseas invertir?")
+                print ("#######################")
+                crearPlazoFijo = float(input("ingrese el monto: "))
+                print ("#######################")
+                print("estas seguro de invertir en un plazo fijo" , crearPlazoFijo, "con interes de 85 anual")
+                confirma  = str(input("ingresa \n     #si para confirmar. \n     #no para cancelar "))
+                if confirma == "si":
+                    gananciaPlazoFijo = crearPlazoFijo * (85/100)
+                    plazoFijoTotal = crearPlazoFijo + gananciaPlazoFijo
+                    saldoActual = saldo - crearPlazoFijo
+                    print("#####################################################")
+                    print("El saldo en tu cuenta pesos es de: $" , saldoActual)
+                    print("El plazo fijo ha recibir es de" , plazoFijoTotal )
+                    print("#####################################################")
+                elif confirma == "no":
+                    print("has cancelado tu plazo fijo")                 
             #8ver ultimos movimientos
             #9salir de la cuenta
         else:
